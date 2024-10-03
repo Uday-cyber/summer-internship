@@ -1,0 +1,22 @@
+{
+  "name": "summer-internship",
+  "version": "1.0.0",
+  "description": "Summer Internship project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uday-cyber/Bootcamp-Full-Stack.git#main"
+  },
+  "author": "Uday_Vashishtha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Uday-cyber/Bootcamp-Full-Stack/issues"
+  },
+  "homepage": "https://github.com/Uday-cyber/Bootcamp-Full-Stack/tree/main#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

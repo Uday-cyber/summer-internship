@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/Eduford-css.css">
+    <title>Eduford University | Home</title>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/458c6a2b6a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="header">
+        <nav>
+            <a href="/html/Eduford-index.html"><img src="/images/eduford_img/logo.png" alt="Eduford Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/html/Eduford-index.html">Home</a></li>
+                    <li><a href="/html/Eduford-about.html">About</a></li>
+                    <li><a href="/html/Eduford-course.html">Course</a></li>
+                    <li><a href="/html/Eduford-blog.html">Blog</a></li>
+                    <li><a href="/html/Eduford-contact.html">Contact</a></li>
+                    <li><a href="/html/Eduford-signin.html" class="hero-btn sign-in-btn" id="signInBtn">Sign In</a></li>
+                </ul>
+            </div>
+            <div class="user-icon-container" id="userIconContainer" style="display: none;">
+                <i class="fas fa-user-circle user-icon"></i>
+                <div class="user-dropdown">
+                    <a href="/html/Eduford-profile.html">My Courses</a>
+                    <a href="/html/Eduford-editprofile.html">Edit Profile</a>
+                    <a href="#" class="logout" onclick="logout()">Logout</a>
+                </div>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>World's Biggest University</h1>
+            <p>Making websites is now one of the easiest things in the world. You just need to learn HTML, CSS, <br> Javascript and you are good to go.</p>
+            <a href="#" class="hero-btn">Visit Us To Know More</a>
+        </div>
+    </section>
+
+
+    <!-- Course Section -->
+    <section class="course" id="down">
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, exercitationem!</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermediate</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed accusantium ipsam voluptatibus vero hic, molestiae quos dicta ut earum est officia corrupti, exercitationem ullam? Ipsum?</p>
+            </div>
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed accusantium ipsam voluptatibus vero hic, molestiae quos dicta ut earum est officia corrupti, exercitationem ullam? Ipsum?</p>
+            </div>
+            <div class="course-col">
+                <h3>Post Graduation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed accusantium ipsam voluptatibus vero hic, molestiae quos dicta ut earum est officia corrupti, exercitationem ullam? Ipsum?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Section -->
+    <section class="campus">
+        <h1>Our Global Campus</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="/images/eduford_img/london.png" alt="London Campus">
+                <div class="layer">
+                    <h3>LONDON</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="/images/eduford_img/newyork.png" alt="New York Campus">
+                <div class="layer">
+                    <h3>NEW YORK</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="/images/eduford_img/washington.png" alt="Washington Campus">
+                <div class="layer">
+                    <h3>WASHINGTON</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="/images/eduford_img/library.png" alt="Library">
+                <h3>World Class Library</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, odio.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="/images/eduford_img/basketball.png" alt="Playground">
+                <h3>Largest Playground</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, odio.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="/images/eduford_img/cafeteria.png" alt="Cafeteria">
+                <h3>Tasty & Healthy Food</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, odio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h1>What Our Students Say</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="/images/eduford_img/user1.jpg" alt="User Testimonial 1">
+                <div>
+                    <p><i class="fas fa-quote-left"></i>&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fugit hic rerum pariatur beatae consectetur veniam impedit molestias repudiandae eius!</p>
+                    <h3>Christine Berkley</h3>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="/images/eduford_img/user2.jpg" alt="User Testimonial 2">
+                <div>
+                    <p><i class="fas fa-quote-left"></i>&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fugit hic rerum pariatur beatae consectetur veniam impedit molestias repudiandae eius!</p>
+                    <h3>David Byer</h3>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <h1>Enroll For Our Various Online Courses <br> Anywhere From The World</h1>
+        <a href="/html/Eduford-contact.html" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores porro veniam inventore eius natus perspiciatis vel enim culpa.</p>
+        <div class="icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+        <p>Made with <i class="far fa-heart"></i> by Uday Vashishtha</p>
+    </section>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        // Show menu function
+        function showMenu() {
+            document.getElementById("navLinks").style.right = "0";
+        }
+
+        // Hide menu function
+        function hideMenu() {
+            document.getElementById("navLinks").style.right = "-200px";
+        }
+
+        // Logout functionality
+        function logout() {
+            alert('You have logged out.'); // Optional alert
+            document.getElementById('userIconContainer').style.display = 'none'; // Hide user icon
+            document.getElementById('signInBtn').style.display = 'block'; // Show sign-in button
+
+            // Clear user session if needed
+            // For example, using localStorage:
+            localStorage.removeItem('user'); // Remove user data from localStorage or your session handling
+        }
+
+        // Check if the user is logged in (using localStorage as an example)
+        function checkUserLoggedIn() {
+            const user = localStorage.getItem('user'); // Retrieve user data
+            if (user) {
+                document.getElementById('signInBtn').style.display = 'none'; // Hide sign-in button
+                document.getElementById('userIconContainer').style.display = 'block'; // Show user icon
+            } else {
+                document.getElementById('signInBtn').style.display = 'block'; // Show sign-in button
+                document.getElementById('userIconContainer').style.display = 'none'; // Hide user icon
+            }
+        }
+        
+        // Call this function when the page loads to check the login status
+        window.onload = checkUserLoggedIn;
+    </script>
+</body>
+</html>

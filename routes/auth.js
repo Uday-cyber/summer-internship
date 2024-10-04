@@ -5,8 +5,6 @@ const User = require('../models/User');
 router.post('/register', async (req, res) => {
     const { username, email, mobile, password } = req.body;
     
-    // You can add validation checks here
-
     try {
         const newUser = new User({ username, email, mobile, password });
         await newUser.save();

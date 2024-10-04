@@ -2,8 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt'); // Import bcrypt for password hashing
-require('dotenv').config(); // Load environment variables
+const bcrypt = require('bcrypt');
+require('dotenv').config();
 
 const app = express();
 
@@ -24,7 +24,7 @@ const connectDB = async () => {
         console.log('MongoDB connected successfully');
     } catch (error) {
         console.error('MongoDB connection error:', error);
-        process.exit(1); // Exit process with failure
+        process.exit(1);
     }
 };
 
@@ -32,7 +32,7 @@ const connectDB = async () => {
 connectDB();
 
 // User model
-const User = require('./models/User'); // Ensure your User model is correctly set up
+const User = require('./models/User');
 
 // Routes to serve HTML files
 app.get('/', (req, res) => {
@@ -55,34 +55,29 @@ app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'Eduford-contact.html'));
 });
 
-// Route to handle user registration (POST request)
+// Route to handle user registration
 app.post('/register', async (req, res) => {
     const { username, email, mobile, password } = req.body;
 
     try {
-        // Validate the form data
         if (!username || !email || !mobile || !password) {
             return res.status(400).json({ message: 'Please fill in all fields.' });
         }
 
-        // Check if the user already exists
         const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.status(400).json({ message: 'User with this email already exists.' });
         }
 
-        // Hash the password before storing it
-        const hashedPassword = await bcrypt.hash(password, 10); // 10 is the salt rounds
+        const hashedPassword = await bcrypt.hash(password, 10);
 
-        // Create a new user
         const newUser = new User({
             username,
             email,
             mobile,
-            password: hashedPassword, // Store the hashed password
+            password: hashedPassword,
         });
 
-        // Save the user to the database
         await newUser.save();
         res.status(201).json({ message: 'User registered successfully!' });
     } catch (error) {
@@ -91,36 +86,31 @@ app.post('/register', async (req, res) => {
     }
 });
 
-// Route to handle user login (POST request)
+// Route to handle user login
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        // Validate the form data
         if (!email || !password) {
             return res.status(400).send('Please fill in all fields.');
         }
 
-        // Check if the user exists
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(401).send('Email does not exist.'); // User not found
+            return res.status(401).send('Email does not exist.');
         }
 
-        // Check if the password is correct
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
-            return res.status(401).send('Incorrect password.'); // Password mismatch
+            return res.status(401).send('Incorrect password.');
         }
 
-        // Successful login
-        res.status(200).json({ message: 'Login successful!', user }); // Send success response with user data
+        res.status(200).json({ message: 'Login successful!', user });
     } catch (error) {
         console.error('Login error:', error);
-        res.status(500).send('Server error'); // General server error
+        res.status(500).send('Server error');
     }
 });
-
 
 // Start the server
 const PORT = process.env.PORT || 3000;
